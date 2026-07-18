@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Legacy</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Legacy.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+    <div class="layout-wrapper">
+        <!-- HEADER -->
+        <header class="app-header">
+            <div class="header-content">
+                <div class="header-brand">
+                    <i class="fas fa-cog header-icon"></i>
+                    <span class="brand-text">Legacy System</span>
+                </div>
+                <div class="header-toolbar">
+                    <!-- Barra de herramientas superior - a definir -->
+                    <div class="toolbar-items">
+                        <!-- Componentes de la barra de herramientas -->
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- CONTENEDOR PRINCIPAL -->
+        <div class="layout-container">
+            <!-- SIDEBAR (Menú de Navegación) -->
+            <aside class="app-sidebar">
+                <nav class="sidebar-nav">
+                    <div class="nav-section">
+                        <a class="nav-item" asp-area="" asp-controller="Home" asp-action="Index">
+                            <i class="fas fa-home nav-icon"></i>
+                            <span class="nav-text">Inicio</span>
+                        </a>
+                    </div>
+
+                    <div class="nav-section">
+                        <div class="nav-section-title">Componentes</div>
+                        
+                        <a class="nav-item" asp-area="" asp-controller="AdmSuministros" asp-action="Index">
+                            <i class="fas fa-boxes nav-icon"></i>
+                            <span class="nav-text">Adm.Suministros</span>
+                        </a>
+                        
+                        <a class="nav-item" asp-area="" asp-controller="GestionOTs" asp-action="Index">
+                            <i class="fas fa-tasks nav-icon"></i>
+                            <span class="nav-text">Gestión OTs</span>
+                        </a>
+                        
+                        <a class="nav-item" asp-area="" asp-controller="AnalisisHurto" asp-action="Index">
+                            <i class="fas fa-chart-bar nav-icon"></i>
+                            <span class="nav-text">Análisis Hurto</span>
+                        </a>
+                        
+                        <a class="nav-item" asp-area="" asp-controller="Reclamaciones" asp-action="Index">
+                            <i class="fas fa-file-alt nav-icon"></i>
+                            <span class="nav-text">Reclamaciones</span>
+                        </a>
+                        
+                        <a class="nav-item" asp-area="" asp-controller="GestionSAE" asp-action="Index">
+                            <i class="fas fa-gear nav-icon"></i>
+                            <span class="nav-text">Gestión SAE</span>
+                        </a>
+                        
+                        <a class="nav-item" asp-area="" asp-controller="AdmMedidores" asp-action="Index">
+                            <i class="fas fa-tachometer-alt nav-icon"></i>
+                            <span class="nav-text">Adm.Medidores</span>
+                        </a>
+                    </div>
+                </nav>
+            </aside>
+
+            <!-- ÁREA DE CONTENIDO PRINCIPAL -->
+            <main class="app-content">
+                @RenderBody()
+            </main>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="app-footer">
+            <div class="footer-left">
+                <span class="status-label">Rol: <strong>@(ViewBag.UserRole ?? "No definido")</strong></span>
+            </div>
+            <div class="footer-right">
+                <span class="copyright">&copy; 2026 - Legacy System</span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

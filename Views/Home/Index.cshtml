@@ -1,0 +1,197 @@
+﻿@{
+    ViewData["Title"] = "Inicio - Legacy System - Edesur";
+}
+
+<div class="welcome-section">
+    <div class="welcome-banner">
+        <h1 class="welcome-title">
+            <i class="fas fa-cog"></i> Bienvenido a Legacy System de Edesur
+        </h1>
+        <p class="welcome-subtitle">Sistema Integral de Gestión Administrativa</p>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <div class="welcome-card">
+                <div class="card-icon">
+                    <i class="fas fa-chart-pie"></i>
+                </div>
+                <h3>Panel de Control</h3>
+                <p>Accede a toda la información y funcionalidades del sistema desde un único lugar.</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="welcome-card">
+                <div class="card-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Gestión Integrada</h3>
+                <p>Administra suministros, órdenes de trabajo, reclamaciones y más en una plataforma unificada.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="welcome-card">
+                <div class="card-icon">
+                    <i class="fas fa-bar-chart"></i>
+                </div>
+                <h3>Análisis y Reportes</h3>
+                <p>Obtén reportes detallados y análisis de todas tus operaciones en tiempo real.</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="welcome-card">
+                <div class="card-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Seguridad y Control</h3>
+                <p>Sistema con roles de usuario, auditoría y control de acceso a funcionalidades.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <div class="info-banner">
+                <h4><i class="fas fa-info-circle"></i> Acceso Rápido a Componentes</h4>
+                <p>Utiliza el menú lateral izquierdo para acceder a los diferentes módulos del sistema:</p>
+                <ul class="component-list">
+                    <li><strong>Adm.Suministros:</strong> Gestión de inventario y provisiones</li>
+                    <li><strong>Gestión OTs:</strong> Control de órdenes de trabajo</li>
+                    <li><strong>Análisis Hurto:</strong> Análisis de discrepancias y pérdidas</li>
+                    <li><strong>Reclamaciones:</strong> Registro y seguimiento de reclamaciones</li>
+                    <li><strong>Gestión SAE:</strong> Control del sistema automático de energía</li>
+                    <li><strong>Adm.Medidores:</strong> Administración de dispositivos de medición</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .welcome-section {
+        animation: fadeInDown 0.6s ease-in-out;
+    }
+
+    @@keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .welcome-banner {
+        text-align: center;
+        margin-bottom: 50px;
+        padding: 40px;
+        background: linear-gradient(135deg, rgba(74, 158, 255, 0.15) 0%, rgba(13, 59, 102, 0.15) 100%);
+        border-radius: 10px;
+        border-left: 5px solid var(--accent-color);
+    }
+
+    .welcome-title {
+        font-size: 42px;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .welcome-title i {
+        font-size: 48px;
+        color: var(--accent-color);
+    }
+
+    .welcome-subtitle {
+        font-size: 18px;
+        color: var(--text-secondary);
+        margin: 0;
+    }
+
+    .welcome-card {
+        background: linear-gradient(135deg, rgba(74, 158, 255, 0.1) 0%, rgba(13, 59, 102, 0.1) 100%);
+        border: 1px solid var(--border-color);
+        border-radius: 10px;
+        padding: 30px 20px;
+        text-align: center;
+        transition: all 0.3s ease;
+        height: 100%;
+    }
+
+    .welcome-card:hover {
+        transform: translateY(-10px);
+        border-color: var(--accent-color);
+        background: linear-gradient(135deg, rgba(74, 158, 255, 0.2) 0%, rgba(13, 59, 102, 0.2) 100%);
+        box-shadow: 0 10px 30px rgba(74, 158, 255, 0.2);
+    }
+
+    .card-icon {
+        font-size: 48px;
+        color: var(--accent-color);
+        margin-bottom: 15px;
+    }
+
+    .welcome-card h3 {
+        color: var(--text-primary);
+        font-weight: 600;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .welcome-card p {
+        color: var(--text-secondary);
+        font-size: 14px;
+        margin: 0;
+    }
+
+    .info-banner {
+        background: linear-gradient(135deg, rgba(74, 158, 255, 0.15) 0%, rgba(13, 59, 102, 0.15) 100%);
+        border-left: 5px solid var(--accent-color);
+        border-radius: 8px;
+        padding: 25px;
+        color: var(--text-primary);
+    }
+
+    .info-banner h4 {
+        color: var(--accent-color);
+        margin-bottom: 15px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .info-banner p {
+        color: var(--text-secondary);
+        margin-bottom: 15px;
+    }
+
+    .component-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .component-list li {
+        padding: 8px 0;
+        color: var(--text-secondary);
+        border-bottom: 1px solid rgba(74, 158, 255, 0.2);
+    }
+
+    .component-list li:last-child {
+        border-bottom: none;
+    }
+
+    .component-list strong {
+        color: var(--accent-color);
+    }
+</style>
