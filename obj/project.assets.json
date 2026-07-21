@@ -8,19 +8,19 @@
     "net9.0": []
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {}
+    "C:\\Users\\Usuario\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Documents\\Proyectos\\www\\Net\\Legacy\\Legacy.csproj",
+      "projectUniqueName": "C:\\Users\\Usuario\\Documents\\Proyectos\\www\\Net\\Legacy\\Legacy.csproj",
       "projectName": "Legacy",
-      "projectPath": "C:\\Users\\User\\Documents\\Proyectos\\www\\Net\\Legacy\\Legacy.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Documents\\Proyectos\\www\\Net\\Legacy\\obj\\",
+      "projectPath": "C:\\Users\\Usuario\\Documents\\Proyectos\\www\\Net\\Legacy\\Legacy.csproj",
+      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Usuario\\Documents\\Proyectos\\www\\Net\\Legacy\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
