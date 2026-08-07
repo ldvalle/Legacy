@@ -392,3 +392,105 @@ body {
     display: none;
   }
 }
+/* MI ESCRITORIO */
+.component-header {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.component-header h1 {
+  color: var(--text-primary);
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 0;
+}
+
+.component-header h1 i {
+  color: var(--accent-color);
+  font-size: 36px;
+}
+
+.mi-escritorio__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.mi-escritorio__menu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mi-escritorio__menu-item {
+  background: transparent;
+  color: var(--text-secondary);
+  font-weight: 600;
+  padding: 8px 14px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+.mi-escritorio__menu-item:hover,
+.mi-escritorio__menu-item:focus {
+  color: var(--text-primary);
+  background-color: rgba(74, 158, 255, 0.15);
+  border-color: var(--accent-color);
+}
+
+.mi-escritorio__content .card-body {
+  padding: 24px;
+}
+
+.mi-escritorio__actions,
+.mi-escritorio__role-field {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mi-escritorio__actions {
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.mi-escritorio__role-field .form-select {
+  min-width: 260px;
+}
+
+.mi-escritorio__read-button {
+  min-width: 96px;
+}
+
+.mi-escritorio__table-wrapper {
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+}
+
+.mi-escritorio__table-wrapper .table {
+  min-width: 980px;
+}
+
+@media (max-width: 768px) {
+  .mi-escritorio__header,
+  .mi-escritorio__actions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .mi-escritorio__role-field {
+    width: 100%;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .mi-escritorio__role-field .form-select,
+  .mi-escritorio__read-button {
+    width: 100%;
+  }
+}

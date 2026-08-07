@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Legacy.Models;
 
 namespace Legacy.Controllers
 {
@@ -8,7 +9,7 @@ namespace Legacy.Controllers
         {
             ViewBag.UserRole = "Administrador";
             ViewData["Title"] = "Mi Escritorio";
-            return View();
+            return View(new MiEscritorioViewModel());
         }
     }
 }

@@ -118,7 +118,6 @@ C:\Users\Usuario\Documents\Proyectos\www\Net\Legacy\obj\Debug\net9.0\rjsmcshtml.
 C:\Users\Usuario\Documents\Proyectos\www\Net\Legacy\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\Usuario\Documents\Proyectos\www\Net\Legacy\obj\Debug\net9.0\scopedcss\bundle\Legacy.styles.css
 C:\Users\Usuario\Documents\Proyectos\www\Net\Legacy\obj\Debug\net9.0\scopedcss\projectbundle\Legacy.bundle.scp.css
-C:\Users\Usuario\Documents\Proyectos\www\Net\Legacy\obj\Debug\net9.0\compressed\fiw0uqevnx-ldvhghiiro.gz
 C:\Users\Usuario\Documents\Proyectos\www\Net\Legacy\obj\Debug\net9.0\compressed\2ae8lidlj0-61n19gt1b8.gz
 C:\Users\Usuario\Documents\Proyectos\www\Net\Legacy\obj\Debug\net9.0\compressed\vn2j27j472-xtxxf3hu2r.gz
 C:\Users\Usuario\Documents\Proyectos\www\Net\Legacy\obj\Debug\net9.0\compressed\lr14sgy7mw-t1cqhe9u97.gz
@@ -191,3 +190,9 @@ C:\Users\Usuario\Documents\Proyectos\www\Net\Legacy\obj\Debug\net9.0\refint\Lega
 C:\Users\Usuario\Documents\Proyectos\www\Net\Legacy\obj\Debug\net9.0\Legacy.pdb
 C:\Users\Usuario\Documents\Proyectos\www\Net\Legacy\obj\Debug\net9.0\Legacy.genruntimeconfig.cache
 C:\Users\Usuario\Documents\Proyectos\www\Net\Legacy\obj\Debug\net9.0\ref\Legacy.dll
+C:\tmp\LegacyBuild\appsettings.Development.json
+C:\tmp\LegacyBuild\appsettings.json
+C:\tmp\LegacyBuild\Legacy.staticwebassets.runtime.json
+C:\tmp\LegacyBuild\Legacy.staticwebassets.endpoints.json
+C:\tmp\LegacyBuild\Legacy.exe
+C:\Users\Usuario\Documents\Proyectos\www\Net\Legacy\obj\Debug\net9.0\compressed\fiw0uqevnx-8ldb9y39tg.gz

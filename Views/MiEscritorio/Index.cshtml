@@ -1,30 +1,60 @@
+@model Legacy.Models.MiEscritorioViewModel
+
 @{
     ViewData["Title"] = "Mi Escritorio";
 }
 
-<div class="component-header">
-    <h1><i class="fas fa-chart-bar"></i> Mi Escritorio</h1>
-</div>
+<section class="mi-escritorio" aria-labelledby="mi-escritorio-title">
+    <header class="component-header mi-escritorio__header">
+        <h1 id="mi-escritorio-title"><i class="fas fa-chart-bar" aria-hidden="true"></i> Mi Escritorio</h1>
+        <nav class="mi-escritorio__menu" aria-label="Opciones de Mi Escritorio">
+            <button type="button" class="mi-escritorio__menu-item">Manser</button>
+            <button type="button" class="mi-escritorio__menu-item">Retcli</button>
+            <button type="button" class="mi-escritorio__menu-item">Segen</button>
+        </nav>
+    </header>
 
+    <div class="card mi-escritorio__content">
+        <div class="card-body">
+            <div class="mi-escritorio__actions">
+                <div class="mi-escritorio__role-field">
+                    <label for="selRol" class="form-label mb-0">Rol Activo</label>
+                    <select id="selRol" name="selRol" class="form-select" aria-label="Rol Activo">
+                        <option value="">Seleccione un rol</option>
+                    </select>
+                </div>
+                <button type="button" class="btn btn-primary mi-escritorio__read-button">Leer</button>
+            </div>
 
-<style>
-    .component-header {
-        margin-bottom: 30px;
-        padding-bottom: 20px;
-        border-bottom: 2px solid var(--accent-color);
-    }
-
-    .component-header h1 {
-        color: var(--text-primary);
-        font-size: 20px;
-        font-weight: 700;
-        display: flex;
-        align-items: center;
-        gap: 15px;
-    }
-
-    .component-header i {
-        color: var(--accent-color);
-        font-size: 36px;
-    }
-</style>
+            <div class="table-responsive mi-escritorio__table-wrapper">
+                <table class="table table-striped table-hover align-middle mb-0" id="grdMensajes">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nro.Mensaje</th>
+                            <th scope="col">Referencia</th>
+                            <th scope="col">Rol Anterior</th>
+                            <th scope="col">Rol Actual</th>
+                            <th scope="col">Fecha Traspaso</th>
+                            <th scope="col">Etiqueta</th>
+                            <th scope="col">Procedimiento</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var mensaje in Model.Mensajes)
+                    {
+                        <tr>
+                            <td>@mensaje.NroMensaje</td>
+                            <td>@mensaje.Referencia</td>
+                            <td>@mensaje.RolAnterior</td>
+                            <td>@mensaje.RolActual</td>
+                            <td>@mensaje.FechaTraspaso.ToString("dd/MM/yyyy")</td>
+                            <td>@mensaje.Etiqueta</td>
+                            <td>@mensaje.Procedimiento</td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
