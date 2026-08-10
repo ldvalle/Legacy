@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "4JD9MI5l8Bk=",
+  "dgSpecHash": "aPCBI+d1lzg=",
   "success": true,
   "projectFilePath": "C:\\Users\\Usuario\\Documents\\Proyectos\\www\\Net\\Legacy\\Legacy.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Usuario\\.nuget\\packages\\system.data.odbc\\9.0.0\\system.data.odbc.9.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
