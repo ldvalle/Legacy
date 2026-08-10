@@ -21,6 +21,10 @@
                     <label for="selRol" class="form-label mb-0">Rol Activo</label>
                     <select id="selRol" name="selRol" class="form-select" aria-label="Rol Activo">
                         <option value="">Seleccione un rol</option>
+                        @foreach (string rol in Model.Roles)
+                        {
+                            <option value="@rol">@rol</option>
+                        }
                     </select>
 
                     <input id="txtRol" name="txtRol" type="text" class="form-control" placeholder="Rol Actual" aria-label="Rol Actual" />
@@ -43,7 +47,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                    @foreach (var mensaje in Model.Mensajes)
+                    @foreach (TraspasoMensajeViewModel mensaje in Model.Mensajes)
                     {
                         <tr>
                             <td>@mensaje.NroMensaje</td>
@@ -61,3 +65,47 @@
         </div>
     </div>
 </section>
+
+@section Scripts {
+    <script>
+        document.getElementById("cmdRol").addEventListener("click", async () => {
+            const txtRol = document.getElementById("txtRol");
+            const selRol = document.getElementById("selRol");
+            const rol = txtRol.value.trim();
+
+            if (!rol) {
+                txtRol.setCustomValidity("Debe ingresar un rol.");
+                txtRol.reportValidity();
+                txtRol.focus();
+                return;
+            }
+
+            txtRol.setCustomValidity("");
+            txtRol.value = rol.toUpperCase();
+            selRol.disabled = true;
+alert("Rol ingresado: " + rol.toUpperCase());
+
+            try {
+                //const response = await fetch("@Url.Action(action: "GetRolesAsync", controller: "MiEscritorioController")?rol=" + encodeURIComponent(txtRol.value));
+                const response = await fetch("http://localhost:5007/Controllers/MiEscritorioController.cs/GetRolesAsync?rol=" + encodeURIComponent(txtRol.value));
+alert("Paso 1");
+                if (!response.ok) {
+                    throw new Error("Response Not OK. No se pudieron cargar los roles." + response.url + " - " + response.status + " - " + response.statusText);
+                }
+alert("Paso 2");
+                const roles = await response.json();
+                selRol.replaceChildren(new Option("Seleccione un rol", ""));
+alert("Paso 3");
+                for (const rolDisponible of roles) {
+                    selRol.add(new Option(rolDisponible, rolDisponible));
+                }
+alert("Paso 4");                
+            } catch (error) {
+alert("Paso 5 . " + error.message);                                
+                selRol.replaceChildren(new Option("Error.No se pudieron cargar los roles. " + error.message, ""));
+            } finally {
+                selRol.disabled = false;
+            }
+        });
+    </script>
+}

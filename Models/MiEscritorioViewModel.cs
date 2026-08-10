@@ -3,6 +3,8 @@ namespace Legacy.Models;
 public class MiEscritorioViewModel
 {
     public IReadOnlyList<TraspasoMensajeViewModel> Mensajes { get; init; } = [];
+
+    public IReadOnlyList<string> Roles { get; init; } = [];
 }
 
 public class TraspasoMensajeViewModel
