@@ -123,15 +123,38 @@
                 if (!response.ok) {
                     throw new Error("Response Not OK. No se pudieron cargar los mensajes." + response.url + " - " + response.status + " - " + response.statusText);
                 }
+                
+                //const msg = await response.text();
+                //alert("Respuesta del servidor: " + msg);
 
                 const mensajes = await response.json();
-                // Process the messages as needed
-                for(const mensaje of mensajes) {
-                    // console.log(mensaje);
-                    alert(`Mensaje: ${mensaje.nroMensaje}, Referencia: ${mensaje.referencia}, Rol Anterior: ${mensaje.rolAnterior}, Rol Actual: ${mensaje.rolActual}, Fecha Traspaso: ${mensaje.fechaTraspaso}, Etiqueta: ${mensaje.etiqueta}, Procedimiento: ${mensaje.procedimiento}`);
-                    alert("Tarea nro " + mensaje.nroMensaje + " procesada correctamente.");
-                }
+                const cuerpoTabla = document.querySelector("#grdMensajes tbody");
+                const formatoFecha = new Intl.DateTimeFormat("es-AR");
 
+                alert("Mensajes cargados: " + mensajes.length);
+
+
+                cuerpoTabla.replaceChildren();
+
+                for (const mensaje of mensajes) {
+                    const fila = document.createElement("tr");
+                    const valores = [
+                        mensaje.nroMensaje,
+                        mensaje.referencia,
+                        mensaje.rolAnterior,
+                        mensaje.rolActual,
+                        formatoFecha.format(new Date(mensaje.fechaTraspaso)),
+                        mensaje.etiqueta,
+                        mensaje.procedimiento
+                    ];
+
+                    for (const valor of valores) {
+                            const celda = document.createElement("td");
+                            celda.textContent = valor ?? "";
+                            fila.append(celda);
+                    }                                    
+                    cuerpoTabla.append(fila);
+                }
             } catch (error) {
                 console.error("Error al cargar los mensajes:", error);
             }

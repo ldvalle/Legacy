@@ -23,7 +23,7 @@ namespace Legacy.Controllers
 
         [HttpGet]
         [ActionName(nameof(GetMiEscritorioAsync))]
-        public async Task<ActionResult<IReadOnlyList<MiEscritorioViewModel>>> GetMiEscritorioAsync(string rol, CancellationToken cancellationToken)
+        public async Task<ActionResult<IReadOnlyList<TraspasoMensajeViewModel>>> GetMiEscritorioAsync(string rol, CancellationToken cancellationToken)
         {
             await using var connection = _informixConnection.CreateConnection();
             await connection.OpenAsync(cancellationToken);
@@ -31,24 +31,18 @@ namespace Legacy.Controllers
             command.Parameters.Add("rol", OdbcType.VarChar).Value = rol;
             await using var reader = await command.ExecuteReaderAsync(cancellationToken);
 
-            var result = new List<MiEscritorioViewModel>();
+            var result = new List<TraspasoMensajeViewModel>();
             while (await reader.ReadAsync(cancellationToken))
             {
-                result.Add(new MiEscritorioViewModel
+                result.Add(new TraspasoMensajeViewModel
                 {
-                    Mensajes = new List<TraspasoMensajeViewModel>
-                    {
-                        new TraspasoMensajeViewModel
-                        {
-                            NroMensaje = reader.IsDBNull(0) ? 0 : Convert.ToInt64(reader.GetValue(0)),
-                            Referencia = _informixConnection.GetString(reader, 1)!,
-                            RolAnterior = _informixConnection.GetString(reader, 2)!,
-                            RolActual = _informixConnection.GetString(reader, 3)!,
-                            FechaTraspaso = reader.IsDBNull(4) ? DateTime.MinValue : Convert.ToDateTime(reader.GetValue(4)),
-                            Etiqueta = _informixConnection.GetString(reader, 5)!,
-                            Procedimiento = _informixConnection.GetString(reader, 6)!
-                        }
-                    }
+                    NroMensaje = reader.IsDBNull(0) ? 0 : Convert.ToInt64(reader.GetValue(0)),
+                    Referencia = _informixConnection.GetString(reader, 1)!,
+                    RolAnterior = _informixConnection.GetString(reader, 2)!,
+                    RolActual = _informixConnection.GetString(reader, 3)!,
+                    FechaTraspaso = reader.IsDBNull(4) ? DateTime.MinValue : Convert.ToDateTime(reader.GetValue(4)),
+                    Etiqueta = _informixConnection.GetString(reader, 5)!,
+                    Procedimiento = _informixConnection.GetString(reader, 6)!
                 });                
                    
             }
