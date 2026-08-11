@@ -194,10 +194,10 @@ C:\tmp\LegacyBuild\appsettings.json
 C:\tmp\LegacyBuild\Legacy.staticwebassets.runtime.json
 C:\tmp\LegacyBuild\Legacy.staticwebassets.endpoints.json
 C:\tmp\LegacyBuild\Legacy.exe
-C:\Users\Usuario\Documents\Proyectos\www\Net\Legacy\obj\Debug\net9.0\compressed\fiw0uqevnx-8ldb9y39tg.gz
 C:\Users\Usuario\Documents\Proyectos\www\Net\Legacy\bin\Debug\net9.0\System.Data.Odbc.dll
 C:\Users\Usuario\Documents\Proyectos\www\Net\Legacy\bin\Debug\net9.0\runtimes\unix\lib\net9.0\System.Data.Odbc.dll
 C:\Users\Usuario\Documents\Proyectos\www\Net\Legacy\bin\Debug\net9.0\runtimes\win\lib\net9.0\System.Data.Odbc.dll
 C:\Users\Usuario\Documents\Proyectos\www\Net\Legacy\obj\Debug\net9.0\Legacy.csproj.AssemblyReference.cache
 C:\Users\Usuario\Documents\Proyectos\www\Net\Legacy\obj\Debug\net9.0\Legacy.csproj.Up2Date
-C:\Users\Usuario\Documents\Proyectos\www\Net\Legacy\obj\Debug\net9.0\compressed\vn2j27j472-5rzjjzv0av.gz
+C:\Users\Usuario\Documents\Proyectos\www\Net\Legacy\obj\Debug\net9.0\compressed\vn2j27j472-yfbj2dgna2.gz
+C:\Users\Usuario\Documents\Proyectos\www\Net\Legacy\obj\Debug\net9.0\compressed\fiw0uqevnx-x39yfukxy3.gz

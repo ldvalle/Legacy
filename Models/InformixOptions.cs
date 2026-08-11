@@ -6,6 +6,6 @@ public sealed class InformixOptions
     public int Port { get; init; } = 1547;
     public string Server { get; init; } = "synergia_test";
     public string Database { get; init; } = "synergia";
-    public string UserId { get; init; } = string.Empty;
-    public string Password { get; init; } = string.Empty;
+    public string UserId { get; init; } = "batchsyn";
+    public string Password { get; init; } = "pepe";
 }

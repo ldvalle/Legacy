@@ -21,7 +21,9 @@ namespace Legacy.Controllers
             return View(new MiEscritorioViewModel());
         }
 
-        public async Task<IReadOnlyList<MiEscritorioViewModel>> GetMiEscritorioAsync(string rol, CancellationToken cancellationToken)
+        [HttpGet]
+        [ActionName(nameof(GetMiEscritorioAsync))]
+        public async Task<ActionResult<IReadOnlyList<MiEscritorioViewModel>>> GetMiEscritorioAsync(string rol, CancellationToken cancellationToken)
         {
             await using var connection = _informixConnection.CreateConnection();
             await connection.OpenAsync(cancellationToken);
@@ -51,13 +53,13 @@ namespace Legacy.Controllers
                    
             }
 
-            return result;
+            return Ok(result);
         }
 
         [HttpGet]
+        [ActionName(nameof(GetRolesAsync))]
         public async Task<ActionResult<IReadOnlyList<string>>> GetRolesAsync([FromQuery] string? rol, CancellationToken cancellationToken)
         {
-            Console.WriteLine("el rol es :" + rol);
 
             if (string.IsNullOrWhiteSpace(rol))
             {
