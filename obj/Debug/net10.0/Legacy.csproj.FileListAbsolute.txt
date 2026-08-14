@@ -101,3 +101,8 @@ C:\Users\Usuario\Documents\Proyectos\www\Net\Legacy\obj\Debug\net10.0\Legacy.pdb
 C:\Users\Usuario\Documents\Proyectos\www\Net\Legacy\obj\Debug\net10.0\Legacy.genruntimeconfig.cache
 C:\Users\Usuario\Documents\Proyectos\www\Net\Legacy\obj\Debug\net10.0\ref\Legacy.dll
 C:\Users\Usuario\Documents\Proyectos\www\Net\Legacy\obj\Debug\net10.0\compressed\og8joccbd8-{0}-1txzpoc893-1txzpoc893.gz
+C:\Users\Usuario\Documents\Proyectos\www\Net\Legacy\bin\Debug\net10.0\Dapper.dll
+C:\Users\Usuario\Documents\Proyectos\www\Net\Legacy\bin\Debug\net10.0\Dapper.AOT.dll
+C:\Users\Usuario\Documents\Proyectos\www\Net\Legacy\bin\Debug\net10.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\Usuario\Documents\Proyectos\www\Net\Legacy\bin\Debug\net10.0\Microsoft.OpenApi.dll
+C:\Users\Usuario\Documents\Proyectos\www\Net\Legacy\obj\Debug\net10.0\Legacy.MvcApplicationPartsAssemblyInfo.cs
