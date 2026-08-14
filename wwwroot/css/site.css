@@ -20,7 +20,7 @@
 }
 
 html {
-  font-size: 14px;
+  font-size: 12px;
   height: 100%;
 }
 
@@ -239,6 +239,7 @@ body {
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid var(--border-color);
   color: var(--text-primary);
+  font-size: 12px;
 }
 
 .form-control::placeholder {
@@ -256,6 +257,7 @@ body {
 .form-label {
   color: var(--text-primary);
   font-weight: 500;
+  font-size: 12px;
 }
 
 .form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
@@ -342,6 +344,17 @@ body {
   text-transform: uppercase;
   font-size: 12px;
 }
+
+.table td {
+/*  
+  background-color: rgba(0, 26, 77, 0.6);
+  border-color: var(--border-color);
+  color: var(--accent-color);
+  font-weight: 700;
+*/  
+  font-size: 12px;
+}
+
 
 /* SCROLLBAR */
 ::-webkit-scrollbar {
@@ -465,7 +478,8 @@ body {
 
 .mi-escritorio #selRol option {
   color: var(--text-primary);
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(2, 15, 68, 0.911);
+  font-size: 12px;
 }
 
 .mi-escritorio__read-button {
